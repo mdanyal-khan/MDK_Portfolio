@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDK Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Animated background -->
+<div class="bg-canvas">
+  <div class="grid-overlay"></div>
+  <div class="orb orb-indigo"></div>
+  <div class="orb orb-cyan"></div>
+  <div class="orb orb-purple"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">MDK<span class="logo-dot">.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="nav-link">Home</a>
+  <a href="#about" class="nav-link">About</a>
+  <a href="#skills" class="nav-link">Skills</a>
+  <a href="#education" class="nav-link">Education</a>
+  <a href="#projects" class="nav-link">Projects</a>
+  <a href="#services" class="nav-link">Services</a>
+  <a href="#contact" class="nav-link">Contact</a>
+</div>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-bismillah">
+    بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+  </div>
+  <div class="hero-content">
+    <p class="hero-greeting reveal">As-Salamu Alaykum, My name is</p>
+    <h1 class="hero-title reveal">
+      <span class="hero-title-name">Muhammad Danyal KHAN</span>
+    </h1>
+    <div class="hero-role reveal">
+      <span class="role-prefix">I build</span>
+      <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+    </div>
+    <p class="hero-description reveal">
+      I'm a Software Engineering student at Iqra National University, Peshawar, with a strong foundation
+      in C++, Python, and Flutter development. Passionate about software development, artificial
+      intelligence, and emerging technologies — seeking opportunities to build real-world solutions.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="assets/cv.pdf" class="btn btn-primary" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download Resume
+      </a>
+      <a href="#projects" class="btn btn-secondary">
+        View Projects
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-socials reveal">
+      <a href="https://github.com/mdanyal-khan" class="social-icon" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.14 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.22.69.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/muhammad-danyal-5564a7376/" class="social-icon" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.11 20.45H3.56V9h3.55v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+      </a>
+
+    </div>
+  </div>
+  <div class="hero-visual reveal">
+    <div class="hero-image-wrap">
+      <div class="hero-image-ring"></div>
+      <div class="hero-image-glow"></div>
+      <div class="hero-image">MDK</div>
+      <div class="floating-tag tag-1">Flutter</div>
+      <div class="floating-tag tag-2">Python</div>
+      <div class="floating-tag tag-3">C++</div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span class="scroll-line"></span>
+  </a>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">About Me</span>
+      <h2 class="section-title">A bit of my background</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm a motivated Software Engineering student at Iqra National University, Peshawar,
+          currently in my 6th semester with a CGPA of 3.8/4.0. I have a strong foundation in
+          Computer Science and Information Technology, with hands-on experience in C++, Python,
+          and basic Flutter development.
+        </p>
+        <p>
+          My interests lie at the intersection of software development and artificial intelligence.
+          I'm proficient in Data Structures & Algorithms (DSA), MS Office tools, and familiar with
+          software design principles and problem-solving methodologies.
+        </p>
+        <p>
+          I'm eager to apply my technical knowledge, gain practical experience, and contribute
+          to real-world projects in software development and emerging technologies.
+        </p>
+      </div>
+
+      <div class="stats-grid reveal">
+        <div class="stat-card">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-suffix">th</span>
+          <span class="stat-label">Semester Completed</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="3.8">0</span>
+          <span class="stat-suffix">/4.0</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-label">Languages Spoken</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="2027">0</span>
+          <span class="stat-label">Expected Graduation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section section-alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">What I Work With</span>
+      <h2 class="section-title">Skills & Technologies</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal" style="--proficiency: 76">
+        <div class="skill-ring"><span class="skill-percent">76%</span></div>
+        <h3 class="skill-name">Flutter</h3>
+      </div>
+      <div class="skill-card reveal" style="--proficiency: 80">
+        <div class="skill-ring"><span class="skill-percent">80%</span></div>
+        <h3 class="skill-name">C++</h3>
+      </div>
+      <div class="skill-card reveal" style="--proficiency: 74">
+        <div class="skill-ring"><span class="skill-percent">74%</span></div>
+        <h3 class="skill-name">Python</h3>
+      </div>
+      <div class="skill-card reveal" style="--proficiency: 72">
+        <div class="skill-ring"><span class="skill-percent">72%</span></div>
+        <h3 class="skill-name">DSA</h3>
+      </div>
+      <div class="skill-card reveal" style="--proficiency: 95">
+        <div class="skill-ring"><span class="skill-percent">95%</span></div>
+        <h3 class="skill-name">MS Office</h3>
+      </div>
+      <div class="skill-card reveal" style="--proficiency: 75">
+        <div class="skill-ring"><span class="skill-percent">75%</span></div>
+        <h3 class="skill-name">Android Studio</h3>
+      </div>
+      <div class="skill-card reveal" style="--proficiency: 80">
+        <div class="skill-ring"><span class="skill-percent">80%</span></div>
+        <h3 class="skill-name">VS Code</h3>
+      </div>
+      <div class="skill-card reveal" style="--proficiency: 90">
+        <div class="skill-ring"><span class="skill-percent">90%</span></div>
+        <h3 class="skill-name">Draw.io</h3>
+      </div>
+      <div class="skill-card reveal" style="--proficiency: 85">
+        <div class="skill-ring"><span class="skill-percent">85%</span></div>
+        <h3 class="skill-name">Problem Solving</h3>
+      </div>
+      <div class="skill-card reveal" style="--proficiency: 70">
+        <div class="skill-ring"><span class="skill-percent">70%</span></div>
+        <h3 class="skill-name">Software Design</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">Career Path</span>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2023 — Present</span>
+          <h3 class="timeline-role">B.S. Software Engineering Student</h3>
+          <p class="timeline-company">Iqra National University, Peshawar</p>
+          <p class="timeline-desc">
+            Currently in 6th semester with a CGPA of 3.8/4.0. Studying core subjects in software
+            engineering including data structures, algorithms, software design, and emerging
+            technologies. Expected graduation in 2027.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Python</span>
+            <span class="tag">C++</span>
+            <span class="tag">DSA</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Mar 2022 — Mar 2023</span>
+          <h3 class="timeline-role">Diploma in Information Technology</h3>
+          <p class="timeline-company">Epistemics College of I.T & Management Science, Peshawar</p>
+          <p class="timeline-desc">
+            Completed a Diploma in Information Technology with an outstanding score of 86.78%
+            (1215/1400 marks), building practical IT foundations alongside academic studies.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Information Technology</span>
+            <span class="tag">MS Office</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Nov 2021 — Jul 2023</span>
+          <h3 class="timeline-role">FSc in Computer Science</h3>
+          <p class="timeline-company">University College for Boys, Peshawar</p>
+          <p class="timeline-desc">
+            Completed FSc in Computer Science scoring 74.72% (822/1100 marks), gaining a solid
+            grounding in computational thinking and foundational CS concepts.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Computer Science</span>
+            <span class="tag">Mathematics</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Apr 2019 — Jul 2021</span>
+          <h3 class="timeline-role">Matriculation in Science</h3>
+          <p class="timeline-company">University Public School, Peshawar</p>
+          <p class="timeline-desc">
+            Graduated with 85.82% (944/1100 marks) in the Science stream, demonstrating strong
+            academic performance in Physics, Chemistry, and Mathematics.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Science</span>
+            <span class="tag">Mathematics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Project -->
+<!-- <section class="section section-featured">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">Flagship Work</span>
+      <h2 class="section-title">Featured Project</h2>
+    </div>
+    <div class="featured-card reveal">
+      <div class="featured-text">
+        <h3 class="featured-title">Student Portfolio System</h3>
+        <p class="featured-desc">
+          A cross-platform Flutter application designed to help students manage academic records,
+          track semester progress, and organize coursework — built as a personal learning project
+          applying Flutter fundamentals and clean UI principles.
+        </p>
+        <ul class="featured-features">
+          <li>Built with Flutter for Android and iOS</li>
+          <li>Organized semester-wise subject tracking</li>
+          <li>Clean, intuitive UI using Material Design</li>
+          <li>Data persistence with local storage</li>
+        </ul>
+        <div class="featured-metrics">
+          <div class="metric">
+            <span class="metric-value">Flutter</span>
+            <span class="metric-label">Framework</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">3.8</span>
+            <span class="metric-label">CGPA Achieved</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">6th</span>
+            <span class="metric-label">Semester</span>
+          </div>
+        </div>
+        <div class="featured-tags">
+          <span class="tag">Flutter</span>
+          <span class="tag">Dart</span>
+          <span class="tag">Android Studio</span>
+          <span class="tag">UI Design</span>
+        </div>
+      </div>
+      <div class="featured-visual">
+        <div class="device-mockup">
+          <div class="device-notch"></div>
+          <div class="device-screen">
+            <div class="mock-status-bar"></div>
+            <div class="mock-camera-view">
+              <div class="mock-scan-box"></div>
+              <div class="mock-label">Semester 6 — CGPA 3.8</div>
+              <div class="mock-confidence">Software Engineering</div>
+            </div>
+            <div class="mock-bottom-bar">
+              <div class="mock-pill"></div>
+              <div class="mock-pill mock-pill-active"></div>
+              <div class="mock-pill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Projects Section -->
+<section id="projects" class="section section-alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">Selected Work</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="flutter">Flutter</button>
+      <button class="filter-btn" data-filter="python">Python</button>
+      <button class="filter-btn" data-filter="cpp">C++</button>
+      <button class="filter-btn" data-filter="academic">Academic</button>
+    </div>
+      <div class="project-card reveal" data-category="flutter">
+        <div class="project-thumb project-thumb-4"></div>
+        <div class="project-body">
+          <h3 class="project-title">Task Manager App</h3>
+          <p class="project-desc">A Flutter mobile app for organizing daily tasks with reminders and categories.</p>
+          <div class="project-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Android Studio</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-btn">GitHub</a>
+            <a href="#" class="link-btn link-btn-primary">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">How I Can Help</span>
+      <h2 class="section-title">Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+        </div>
+        <h3 class="service-title">Flutter App Development</h3>
+        <p class="service-desc">Building cross-platform mobile applications for Android using Flutter and Dart with clean, modern UI.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3 class="service-title">C++ Programming</h3>
+        <p class="service-desc">Developing efficient, well-structured C++ programs covering OOP concepts, algorithms, and console applications.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a4 4 0 014 4c0 1.5-.8 2.5-1.5 3.3L12 12l-2.5-2.7C8.8 8.5 8 7.5 8 6a4 4 0 014-4z"/><path d="M12 12v8M9 22h6"/></svg>
+        </div>
+        <h3 class="service-title">Python Scripting</h3>
+        <p class="service-desc">Writing Python scripts for automation, data processing, and building beginner-level AI/ML solutions.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="service-title">MS Office & Documentation</h3>
+        <p class="service-desc">Creating professional documents, reports, spreadsheets, and presentations using Microsoft Office Suite.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+        </div>
+        <h3 class="service-title">Software Design & Diagramming</h3>
+        <p class="service-desc">Creating system diagrams, flowcharts, and software design documents using Draw.io and related tools.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 17H4v-2a4 4 0 014-4h4a4 4 0 014 4v2h-1"/><circle cx="9" cy="7" r="4"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 class="service-title">Academic Collaboration</h3>
+        <p class="service-desc">Collaborating on academic projects, study groups, and software engineering coursework with peers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials
+<section class="section section-alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">Kind Words</span>
+      <h2 class="section-title">Testimonials</h2>
+    </div>
+    <div class="testimonial-carousel reveal">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Danyal is one of the most dedicated students in our batch. His ability to grasp
+            complex programming concepts quickly and apply them practically is truly impressive.
+            A bright future lies ahead."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AS</div>
+            <div>
+              <p class="testimonial-name">Prof. Ahmad Shah</p>
+              <p class="testimonial-position">Lecturer, Iqra National University</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Muhammad Danyal is a hardworking and committed team member. During our group
+            project, he went above and beyond to ensure the Flutter app was polished and
+            delivered on time."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ZK</div>
+            <div>
+              <p class="testimonial-name">Zain Khan</p>
+              <p class="testimonial-position">Classmate & Project Partner, INU</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Danyal's passion for learning is infectious. He consistently tops assignments
+            and always takes the initiative to explore concepts beyond the curriculum.
+            A genuine asset to any team."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">NK</div>
+            <div>
+              <p class="testimonial-name">Nadia Karim</p>
+              <p class="testimonial-position">Senior Student, Software Engineering</p>
+            </div>
+          </div>
+        </div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2 class="section-title">Contact</h2>
+    </div>
+    <div class="contact-grid">
+      <form
+        class="contact-form reveal"
+        id="contactForm"
+        action="https://formspree.io/f/xgobrppb"
+        method="POST"
+      >
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+
+        <button type="submit" class="btn btn-primary btn-submit">
+          <span class="btn-text">Send Message</span>
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2L11 13"/>
+            <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+          </svg>
+        </button>
+        <p id="form-status"></p>
+      </form>
+      <div class="contact-info reveal">
+        <a href="mailto:mdanyal.khan42@gmail.com" class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Email</p>
+            <p class="contact-value">mdanyal.khan42@gmail.com</p>
+          </div>
+        </a>
+        <a href="tel:+923139709274" class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.7 2.34a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.74-1.27a2 2 0 012.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Phone</p>
+            <p class="contact-value">+92 313 9709274</p>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">Location</p>
+            <p class="contact-value">Baghkoroona, Charsadda, KPK, Pakistan</p>
+          </div>
+        </div>
+        <a href="#" class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.11 20.45H3.56V9h3.55v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">LinkedIn</p>
+            <p class="contact-value">in/muhammad-danyal</p>
+          </div>
+        </a>
+        <a href="#" class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.14 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.22.69.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div>
+            <p class="contact-label">GitHub</p>
+            <p class="contact-value">/mdanyal-khan</p>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#home" class="logo">MDK<span class="logo-dot">.</span></a>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a href="https://github.com/mdanyal-khan" class="social-icon" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23.96-.27 1.98-.4 3-.4s2.04.14 3 .4c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.3 0 .32.22.69.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/muhammad-danyal-5564a7376/" class="social-icon" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.11 20.45H3.56V9h3.55v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
+      </a>
+    </div>
+    <p class="footer-copyright">© 2026 Muhammad Danyal. All rights reserved.</p>
+  </div>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
