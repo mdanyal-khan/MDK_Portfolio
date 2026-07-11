@@ -2,7 +2,7 @@
 
 Personal portfolio website of **Muhammad Danyal Khan** — a Software Engineering student at Iqra National University, Peshawar, showcasing skills, education, and projects in Flutter, Python, and C++ development.
 
-**Live site:** _add your deployed URL here (e.g. GitHub Pages / Vercel / Netlify link)_
+**Live site:** [_mdanyal.page.gd_](https://mdanyal.page.gd/)
 
 ---
 
