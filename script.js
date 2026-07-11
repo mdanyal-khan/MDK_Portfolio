@@ -57,6 +57,9 @@ const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   mobileMenu.classList.toggle('open');
+  const expanded = hamburger.classList.contains('active');
+  hamburger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  hamburger.setAttribute('aria-label', expanded ? 'Close menu' : 'Open menu');
 });
 
 mobileMenu.querySelectorAll('.nav-link').forEach((link) => {
@@ -163,8 +166,12 @@ const projectCards = document.querySelectorAll('.project-card');
 
 filterBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach((b) => b.classList.remove('active'));
+    filterBtns.forEach((b) => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
 
     const filter = btn.getAttribute('data-filter');
 

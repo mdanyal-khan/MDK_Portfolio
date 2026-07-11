@@ -1,0 +1,22 @@
+{
+  "name": "Muhammad Danyal Khan | Flutter, Python & C++ Developer",
+  "short_name": "MDK Portfolio",
+  "description": "Portfolio of Muhammad Danyal Khan, a Software Engineering student and Flutter/Python/C++ developer in Peshawar, Pakistan.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
+  "icons": [
+    {
+      "src": "assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
