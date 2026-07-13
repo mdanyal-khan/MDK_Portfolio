@@ -558,6 +558,12 @@ ul, ol { list-style: none; }
   transition-delay: 0.15s;
 }
 
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-top: 12px;
+}
+
 .hero-actions {
   display: flex;
   gap: 16px;

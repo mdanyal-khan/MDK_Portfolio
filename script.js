@@ -74,9 +74,12 @@ mobileMenu.querySelectorAll('.nav-link').forEach((link) => {
 // ===================================================
 const roles = [
   'Flutter mobile apps',
+  'Flutter Desktop/Laptop apps',
   'C++ programs',
   'Python scripts',
-  'real-world software'
+  'Real-World software',
+  'Flutter apps in Charsadda',
+  'Train AI Models'
 ];
 
 const typedTextEl = document.getElementById('typedText');
